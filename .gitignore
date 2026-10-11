@@ -3,3 +3,6 @@ __pycache__/
 runs/
 synth_dataset/
 moscato_dataset/
+.venv/
+.env
+/wandb/

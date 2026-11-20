@@ -1,14 +1,4 @@
-"""Generate a tiny synthetic dataset in the exact MOSCATO on-disk schema.
-
-This lets you smoke-test the full train -> evaluate pipeline before downloading
-the real ~10 GB dataset.  The synthetic labels are *correlated* with the
-features (plus noise), so training loss should drop and metrics should land
-well above chance -- confirming the wiring end-to-end.
-
-    python -m moscato.make_synth --out ./synth_dataset
-    python -m moscato.train    --data_root ./synth_dataset --dataset CMU --use_sai --epochs 15 --out runs/synth.pt
-    python -m moscato.evaluate --data_root ./synth_dataset --dataset CMU --ckpt runs/synth.pt
-"""
+'Generate synthetic MOSCATO-shaped data for training smoke tests.\n\nBenchmark evaluation is maintained in chefOST/chefOST-data.'
 
 from __future__ import annotations
 
